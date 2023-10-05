@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/tasks', [App\Http\Controllers\HomeController::class, 'task'])->name('tasks');
 Route::get('/tasks/create', [App\Http\Controllers\HomeController::class, 'create'])->name('tasks.create');
